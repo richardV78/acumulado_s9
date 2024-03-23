@@ -4,7 +4,8 @@ import dao.daoConnection as dao
 import models.clases
 
 #conectar bd
-conex = dao.Connection("localhost", "root", "", "dbregisters")
+conex = dao.Connection("localhost", "root", "", "bdregisters")
+conex.connect()
 
 #instanciar dao
 daoCity = dao.DaoCity(conex)
@@ -18,7 +19,7 @@ class Connection:
         self.cnx = None
         self.connect()
         
-        
+
     def connect(self):
         self.cnx = mysql.connector.connect(user=self.user, password=self.password, host=self.host, database=self.database)
    
