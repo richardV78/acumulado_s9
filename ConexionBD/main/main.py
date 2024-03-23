@@ -11,4 +11,4 @@ class Connection:
         
     def connect(self):
         self.cnx = mysql.connector.connect(user=self.user, password=self.password, host=self.host, database=self.database)
-    print("hola")
+        
